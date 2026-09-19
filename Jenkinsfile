@@ -8,17 +8,10 @@ pipeline {
                 checkout scm
             }
         }
-
-        stage('Build') {
+    stage('Docker Build') {
             steps {
-                echo 'Building application'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Running tests'
-            }
+                sh 'docker build -t cloud-dashboard:latest .'
+           }
         }
     }
 }
