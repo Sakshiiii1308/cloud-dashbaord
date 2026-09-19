@@ -16,9 +16,9 @@ pipeline {
         stage('Deploy') {
              steps {
                  sh '''
-                      docker stop cloud-board-container || true
-                      docker rm cloud-board-container || true
-                      docker run -d -p 8081:80 --name cloud-board-container cloud-board:latest
+                      docker stop cloud-boardcontainer || true
+                      docker rm cloud-boardcontainer || true
+                      docker run -d -p 8081:80 --name cloud-boardcontainer cloud-dashboard:latest
                  '''
            }
         }
