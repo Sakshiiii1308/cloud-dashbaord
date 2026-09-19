@@ -18,7 +18,7 @@ pipeline {
                  sh '''
                       docker stop cloud-board-container || true
                       docker rm cloud-board-container || true
-                      docker run -d -p 8080:80 --name cloud-board-container cloud-board:latest
+                      docker run -d -p 8081:80 --name cloud-board-container cloud-board:latest
                  '''
            }
         }
