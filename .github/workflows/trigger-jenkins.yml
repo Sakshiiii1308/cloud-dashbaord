@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Trigger Jenkins
         run: |
-          curl -X POST \
-          "http://192.168.111.113:8080/job/cloud-dashboard/build?token=github-trigger"
+          curl -i -X POST \
+          "http://192.168.111.113:8080/buildByToken/build?job=cloud-dashboard&token=github-trigger"
