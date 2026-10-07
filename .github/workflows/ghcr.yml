@@ -25,7 +25,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t ghcr.io/Sakshiiii1308/cloud-dashboard-ghcr:latest .
+        run: docker build -t ghcr.io/sakshiiii1308/cloud-dashboard-ghcr:latest .
 
       - name: Push Docker image to GHCR
-        run: docker push ghcr.io/Sakshiiii1308/cloud-dashboard-ghcr:latest
+        run: docker push ghcr.io/sakshiiii1308/cloud-dashboard-ghcr:latest
